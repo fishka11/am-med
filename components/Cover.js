@@ -16,7 +16,7 @@ export default function Cover({
   const coverBackgroundRef = useRef(null);
   useEffect(() => {
     const coverBackgroundPic = coverBackgroundRef.current;
-    coverBackgroundPic.style.backgroundImage = `url(${bg.url})`;
+    coverBackgroundPic.style.backgroundImage = `linear-gradient(rgba(0, 173, 9, 0.0), rgba(0, 173, 9, 0.2)), url(${bg.url})`;
     coverBackgroundPic.style.backgroundPositionY = `${verticalShift}%`;
   }, [bg.url, verticalShift]);
 

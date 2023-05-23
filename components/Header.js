@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Container, Row, Col, Nav, Navbar, Offcanvas } from 'react-bootstrap/';
+import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap/';
 
 import { menuItems } from '@/lib/SiteVariables';
 import MenuItem from './MenuItem';
@@ -28,7 +28,7 @@ export default function Header({ email, phone }) {
             >
               <Image
                 className={styles.logo}
-                src="/images/logoAmMedInMenu.svg"
+                src="/images/logoAmMed.svg"
                 height={50}
                 width={300}
                 alt="Logo AM-MED"

@@ -1,0 +1,48 @@
+@import '../styles/globals.scss';
+
+.navbar {
+    display: block;
+    padding: 0;
+}
+
+.bar {
+    padding: .5rem 0;
+    background-color: $main;
+}
+
+.barContent {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: smaller;
+    color: #fff;
+    column-gap: 2rem;
+    row-gap: .5rem;
+    flex-wrap: wrap
+}
+
+.barContent a {
+    color: #fff;
+}
+
+
+.navbarBrand {
+    max-width: 50%;
+}
+
+.logo {
+    max-width: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbarBrand {
+        max-width: 60%;
+    }
+    .logo {
+        max-width: 70%;
+    }
+    .barContent {
+        font-size: unset;
+    }
+}

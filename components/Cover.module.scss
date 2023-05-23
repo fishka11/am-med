@@ -1,0 +1,60 @@
+.background {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 96px;
+}
+
+.logoContainer {
+    height: 100%;
+}
+
+.logo {
+    // filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    position: relative !important;
+    margin-bottom: 2rem !important;
+}
+
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    // text-shadow: 1px 3px 2px rgb(0 0 0 / 0.4);
+}
+
+.text p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.button {
+    color: #fff !important;
+}
+
+.button:hover, .button:active {
+    color: #1b1b1b !important;
+}
+
+.textBackground {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media only screen and (max-width: 768px) {
+    .text h1 {
+        font-size: 1.2rem;
+    }
+    .text p {
+        font-size: 1rem;
+    }
+}

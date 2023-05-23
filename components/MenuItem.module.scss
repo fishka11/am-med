@@ -1,0 +1,36 @@
+@import '../styles/globals.scss';
+
+.navLink {
+    position: relative;
+}
+
+.navLink::before {
+    content: "";
+    position: absolute;
+    z-index: -100;
+    display: block;
+    bottom: 5px;
+    left: 0.5rem;
+    width: 0;
+    height: 1px;
+    background-color: $main;
+    transition: all 0.15s ease-in-out;
+}
+
+.navLink.active::before {
+    width: calc(100% - 1rem);
+}
+
+.navLink:hover::before {
+    // left: 0;
+    width: calc(100% - 1rem);
+}
+
+@media only screen and (max-width: 768px) {
+    .navLink::before {
+        left: 0;
+    }
+    .navLink.active::before {
+        width: 50%;
+    }
+}

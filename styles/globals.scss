@@ -1,0 +1,69 @@
+$main: #00ad09;
+$light: #f8f9fa;
+
+$theme-colors: (
+    'primary': $main,
+    'light': $light,
+);
+
+.all {
+    color:#3b3b3b;
+    font-weight: 400;
+    // margin-top: 96px;
+}
+
+.hr {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem
+}
+.content h2 {
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+    font-size: 1.75rem;
+}
+
+.content {
+    padding-top: 96px;
+}
+
+.content a {
+    color: $main;
+}
+
+.headerPic {
+    min-height: 30vh;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.content.codes h1, .content.contact h1 {
+    margin-bottom: unset;
+}
+
+.content.codes .lead,
+.content.contact .lead {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.content.contact p {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        padding-bottom: 1rem;
+        padding-top: 152px;
+    }
+}
+
+// @import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import "/node_modules/bootstrap/scss/functions";
+@import "/node_modules/bootstrap/scss/variables";
+@import "/node_modules/bootstrap/scss/mixins";
+@import "/node_modules/bootstrap/scss/buttons";

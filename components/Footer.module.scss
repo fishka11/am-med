@@ -1,0 +1,14 @@
+.footer {
+    background-color: rgb(222, 230, 232);
+    padding: 5rem 0;
+}
+
+.developer {
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .developer {
+        text-align: left;
+    }
+}

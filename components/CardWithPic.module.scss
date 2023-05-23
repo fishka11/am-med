@@ -1,0 +1,34 @@
+.card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.innerCard {
+    padding: 1rem;
+    background-color: rgb(241, 241, 241);
+    height: 100%;
+    transition: all .5s;
+}
+
+.innerCard:hover {
+    background-color: rgb(230, 255, 229);
+}
+
+.picContainer {
+    position: relative;
+    height: 200px;
+    margin-bottom: .5rem;
+}
+
+.pic {
+    position: relative !important;
+    // overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .picContainer {
+        height: 120px;
+    }
+}

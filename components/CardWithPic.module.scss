@@ -8,9 +8,9 @@
 .innerCard {
     padding: 1rem;
     background-color: rgb(241, 241, 241);
-    border: rgba(0, 124, 6, 0.2) 1px solid;
     height: 100%;
     transition: all .5s;
+    border-radius: 5px;
 }
 
 .innerCard:hover {

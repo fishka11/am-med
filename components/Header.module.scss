@@ -19,7 +19,8 @@
     color: #fff;
     column-gap: 2rem;
     row-gap: .5rem;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    padding: 0 35px;
 }
 
 .barContent a {
@@ -44,5 +45,6 @@
     }
     .barContent {
         font-size: unset;
+        padding: 0 13px;
     }
 }

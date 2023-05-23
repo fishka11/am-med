@@ -18,7 +18,7 @@ export default function Cover({
     const coverBackgroundPic = coverBackgroundRef.current;
     coverBackgroundPic.style.backgroundImage = `url(${bg.url})`;
     coverBackgroundPic.style.backgroundPositionY = `${verticalShift}%`;
-  }, [bg.url]);
+  }, [bg.url, verticalShift]);
 
   return (
     <Container

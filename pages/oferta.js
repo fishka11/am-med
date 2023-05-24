@@ -11,7 +11,7 @@ import LeadingPicture from '@/components/LeadingPicture';
 
 import styles from './oferta.module.scss';
 
-export default function AboutUs({ offerContent }) {
+export default function Offer({ offerContent }) {
   const pageHeaderRef = useRef(null);
   useEffect(() => {
     const pic = pageHeaderRef.current;

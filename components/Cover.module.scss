@@ -1,16 +1,13 @@
 .background {
-    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
-    top: 0;
-    left: 0;
-    position: absolute;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 96px;
-    background-position-x: 40%;
+    padding: 6rem 0;
+    background-position-x: 50%;
+    margin-bottom: 3rem;
 }
 
 .logoContainer {
@@ -23,18 +20,18 @@
     margin-bottom: 2rem !important;
 }
 
-.text {
+.headerText {
     text-align: center;
 }
 
-.text h1 {
+.headerText h1 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
     // text-shadow: 1px 3px 2px rgb(0 0 0 / 0.4);
 }
 
-.text p {
+.headerText p {
     margin-bottom: 0;
     font-weight: 500;
     font-size: 1.3rem;
@@ -49,7 +46,7 @@
 }
 
 .textBackground {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0) 100%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -60,7 +57,7 @@
         font-size: 1rem;
     }
     .textBackground {
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.4);
         padding: 0 1rem;
         border-radius: 5px;
     }

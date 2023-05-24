@@ -42,8 +42,20 @@ $theme-colors: (
     position: relative;
 }
 
+.content.home h2 {
+    text-align: center;
+}
+
 .content.codes h1, .content.contact h1 {
     margin-bottom: unset;
+}
+
+.content.codes h2 {
+    margin-bottom: .4rem;
+}
+
+.content.codes p {
+    margin-bottom: 1.3rem;
 }
 
 .content.codes .lead,

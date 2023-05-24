@@ -6,19 +6,13 @@ import ReactMarkdown from 'react-markdown';
 
 import styles from './Cover.module.scss';
 
-export default function Cover({
-  bg,
-  verticalShift,
-  text,
-  buttonText,
-  buttonUrl,
-}) {
+export default function Cover({ bg, headerText, button }) {
   const coverBackgroundRef = useRef(null);
   useEffect(() => {
     const coverBackgroundPic = coverBackgroundRef.current;
-    coverBackgroundPic.style.backgroundImage = `linear-gradient(rgba(0, 173, 9, 0.0), rgba(0, 173, 9, 0.2)), url(${bg.url})`;
-    coverBackgroundPic.style.backgroundPositionY = `${verticalShift}%`;
-  }, [bg.url, verticalShift]);
+    coverBackgroundPic.style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0), rgba(0, 173, 9, 0.2)), url(${bg.picture.url})`;
+    coverBackgroundPic.style.backgroundPositionY = `${bg.verticalShift}%`;
+  }, [bg]);
 
   return (
     <Container
@@ -38,8 +32,6 @@ export default function Cover({
             >
               <Image
                 className={`${styles.logo} mt-4 mb-4`}
-                // width={390}
-                // height={230}
                 fill
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 100vw,
@@ -50,8 +42,8 @@ export default function Cover({
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col className={`${styles.text}`}>
-              <ReactMarkdown>{text}</ReactMarkdown>
+            <Col className={`${styles.headerText}`}>
+              <ReactMarkdown>{headerText}</ReactMarkdown>
             </Col>
           </Row>
         </div>
@@ -60,10 +52,10 @@ export default function Cover({
           <Col className="col-auto">
             <Link
               className={`${styles.button} btn btn-primary`}
-              href={`${buttonUrl}`}
+              href={`${button.buttonUrl}`}
               role="button"
             >
-              {buttonText}
+              {button.buttonText}
             </Link>
           </Col>
         </Row>

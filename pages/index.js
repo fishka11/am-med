@@ -12,7 +12,6 @@ import Cover from '@/components/Cover';
 import styles from './index.module.scss';
 
 export default function Home({ homeContent }) {
-  console.log(homeContent);
   return (
     <Layout
       email={homeContent.firmDatas[0].email}
@@ -25,44 +24,22 @@ export default function Home({ homeContent }) {
         />
         <title>{homeContent.homes[0].seo.seoTitle}</title>
       </Head>
-      <main className="content">
+      <main className="content home">
         <Cover
           className="cover"
-          bg={homeContent.homes[0].backgroundPic}
-          text={homeContent.homes[0].text.markdown}
-          buttonText={homeContent.homes[0].buttonText}
-          buttonUrl={homeContent.homes[0].buttonUrl}
-          verticalShift={homeContent.homes[0].verticalShift}
+          bg={homeContent.homes[0].headerPicture}
+          headerText={homeContent.homes[0].headerText.markdown}
+          button={homeContent.homes[0].button}
         />
-        {/* <section className={`section}`} id={content.aboutuses[0].anchor}>
-          <AboutUs
-            text={content.aboutuses[0].text.markdown}
-            title={content.aboutuses[0].title}
-          />
-        </section>
-        <hr className="hr" />
-        <section
-          className={`section ${styles.offer}`}
-          id={content.offers[0].anchor}
-        >
-          <Offer
-            text1={content.offers[0].text1.markdown}
-            text2={content.offers[0].text2.markdown}
-            title={content.offers[0].title}
-          />
-        </section>
-        <hr className="hr" />
-        <section
-          className={`section ${styles.codes}`}
-          id={content.codes[0].anchor}
-        >
-          <Codes
-            text={content.codes[0].text.markdown}
-            subtitle={content.codes[0].subtitle}
-            title={content.codes[0].title}
-            bg={content.codes[0].headerBackgroundPic}
-          />
-        </section> */}
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg={8}>
+              <ReactMarkdown>
+                {homeContent.homes[0].text.markdown}
+              </ReactMarkdown>
+            </Col>
+          </Row>
+        </Container>
       </main>
     </Layout>
   );

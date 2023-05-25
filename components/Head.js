@@ -3,6 +3,10 @@ import Head from 'next/head';
 export default function MyHead({ SocialMediaSiteTitle }) {
   return (
     <Head>
+      <meta
+        name="google-site-verification"
+        content="xxG94_ebghrGj_6pDG8jPbRdgoI0PYZjHYWfv2L833A"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

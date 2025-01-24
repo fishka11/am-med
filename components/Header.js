@@ -10,6 +10,7 @@ import styles from './Header.module.scss';
 
 export default function Header({ email, phone }) {
   const router = useRouter();
+  console.log(menuItems);
   return (
     <header>
       <Navbar fixed="top" expand="md" bg="light" className={`${styles.navbar}`}>

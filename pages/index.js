@@ -1,21 +1,17 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { useState, useRef, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import { Container, Row, Col } from 'react-bootstrap';
+import Head from "next/head";
+import { Col, Container, Row } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
 
-import { getContent } from '@/lib/hygraphcms';
-import { getHomeContent } from '@/lib/hygraphcms';
-import Layout from '@/components/Layout';
-import Cover from '@/components/Cover';
-
-import styles from './index.module.scss';
+import Cover from "@/components/Cover";
+import Layout from "@/components/Layout";
+import { getHomeContent } from "@/lib/hygraphcms";
 
 export default function Home({ homeContent }) {
   return (
     <Layout
       email={homeContent.firmDatas[0].email}
       phone={homeContent.firmDatas[0].phone}
+      phones={homeContent.firmDatas[0].phones}
     >
       <Head>
         <meta

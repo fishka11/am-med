@@ -1,30 +1,36 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap/';
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap/";
 
-import { menuItems } from '@/lib/SiteVariables';
-import MenuItem from './MenuItem';
+import { menuItems } from "@/lib/SiteVariables";
+import MenuItem from "./MenuItem";
 
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 
-export default function Header({ email, phone }) {
+export default function Header({ email, phone, phones }) {
   const router = useRouter();
-  console.log(menuItems);
+  console.log("phones ", phones);
   return (
     <header>
       <Navbar fixed="top" expand="md" bg="light" className={`${styles.navbar}`}>
         <Container fluid className={`${styles.bar}`}>
           <Container className={`${styles.barContent}`}>
             <Link href={`mailto:${email}`}>{email}</Link>
-            <Link href={`tel:${phone.replaceAll(' ', '')}`}>{phone}</Link>
+            {phones.map((phone) => {
+              return (
+                <Link key={phone} href={`tel:${phone.replaceAll(" ", "")}`}>
+                  {phone}
+                </Link>
+              );
+            })}
           </Container>
         </Container>
         <Container>
           <Link href="/" passHref legacyBehavior>
             <Navbar.Brand
               className={`${styles.navbarBrand} ${
-                router.pathname === '/' ? 'active' : ''
+                router.pathname === "/" ? "active" : ""
               }`}
             >
               <Image

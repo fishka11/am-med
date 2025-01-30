@@ -1,15 +1,14 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Col, Container, Row } from 'react-bootstrap';
-import ReactMarkdown from 'react-markdown';
-import { useRef, useEffect } from 'react';
+import Head from "next/head";
+import { useEffect, useRef } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
 
-import { getOfferContent } from '@/lib/hygraphcms';
-import Layout from '@/components/Layout';
-import CardWithPic from '@/components/CardWithPic';
-import LeadingPicture from '@/components/LeadingPicture';
+import CardWithPic from "@/components/CardWithPic";
+import Layout from "@/components/Layout";
+import LeadingPicture from "@/components/LeadingPicture";
+import { getOfferContent } from "@/lib/hygraphcms";
 
-import styles from './oferta.module.scss';
+import styles from "./oferta.module.scss";
 
 export default function Offer({ offerContent }) {
   const pageHeaderRef = useRef(null);
@@ -21,6 +20,7 @@ export default function Offer({ offerContent }) {
     <Layout
       email={offerContent.firmDatas[0].email}
       phone={offerContent.firmDatas[0].phone}
+      phones={offerContent.firmDatas[0].phones}
     >
       <Head>
         <meta

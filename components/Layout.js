@@ -5,8 +5,6 @@ import Header from "./Header";
 import { SocialMediaSiteTitle } from "@/lib/SiteVariables";
 
 export default function Layout({ email, phone, phones, children }) {
-  console.log(phones);
-
   return (
     <>
       <Head SocialMediaSiteTitle={SocialMediaSiteTitle} />

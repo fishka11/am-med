@@ -1,14 +1,13 @@
-import Head from 'next/head';
-import { Col, Container, Row } from 'react-bootstrap';
-import ReactMarkdown from 'react-markdown';
-import { useRef, useEffect } from 'react';
+import Head from "next/head";
+import { useEffect, useRef } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
-import { getContactContent } from '@/lib/hygraphcms';
-import LeadingPicture from '@/components/LeadingPicture';
-import Layout from '@/components/Layout';
-import CardWithIcon from '@/components/CardWithIcon';
+import CardWithIcon from "@/components/CardWithIcon";
+import Layout from "@/components/Layout";
+import LeadingPicture from "@/components/LeadingPicture";
+import { getContactContent } from "@/lib/hygraphcms";
 
-import styles from './kontakt.module.scss';
+import styles from "./kontakt.module.scss";
 
 export default function Contact({ contactContent }) {
   const pageHeaderRef = useRef(null);
@@ -21,6 +20,7 @@ export default function Contact({ contactContent }) {
     <Layout
       email={contactContent.firmDatas[0].email}
       phone={contactContent.firmDatas[0].phone}
+      phones={contactContent.firmDatas[0].phones}
     >
       <Head>
         <meta

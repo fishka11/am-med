@@ -1,14 +1,13 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Col, Container, Row } from 'react-bootstrap';
-import ReactMarkdown from 'react-markdown';
-import { useRef, useEffect } from 'react';
+import Head from "next/head";
+import { useEffect, useRef } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
 
-import { getCodeContent } from '@/lib/hygraphcms';
-import LeadingPicture from '@/components/LeadingPicture';
-import Layout from '@/components/Layout';
+import Layout from "@/components/Layout";
+import LeadingPicture from "@/components/LeadingPicture";
+import { getCodeContent } from "@/lib/hygraphcms";
 
-import styles from './kody.module.scss';
+import styles from "./kody.module.scss";
 
 export default function Codes({ codeContent }) {
   const pageHeaderRef = useRef(null);
@@ -20,6 +19,7 @@ export default function Codes({ codeContent }) {
     <Layout
       email={codeContent.firmDatas[0].email}
       phone={codeContent.firmDatas[0].phone}
+      phones={codeContent.firmDatas[0].phones}
     >
       <Head>
         <meta
